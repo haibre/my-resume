@@ -38,6 +38,14 @@
             padding-left: 30px;
         }
 
+        a {
+            color: inherit;
+        }
+
+        a:hover {
+            color: blue;
+        }
+
         hr {
             margin-bottom: 1vh;
         }
@@ -73,6 +81,37 @@
         
         p, h1, h2, h3, h4, h5, h6 {
             overflow-wrap: break-word;
+        }
+
+        @media screen and (max-width: 576px) {
+            body {
+                font-size: small;
+            }
+
+            header p {
+                text-align: left;
+            }
+            /* Penyesuaian grid untuk mobile */
+            .two-column-grid {
+                grid-template-columns: 1fr !important; /* 1 kolom saja */
+                gap: 1px;
+            }
+
+            /* Reset margin/padding */
+            .company-desc, .job-title, .location {
+                margin-left: 0;
+                padding: 0 ; /* Tambahkan padding horizontal */
+            }
+
+            /* Penyesuaian typography */
+            h2, h3 {
+                font-size: 90%; /* Perkecil ukuran heading */
+            }
+
+            /* Sembunyikan elemen opsional di mobile */
+            .desktop-only {
+                display: none;
+            }
         }
      </style>
 </head>
